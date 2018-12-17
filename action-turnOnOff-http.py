@@ -17,15 +17,15 @@ def device_number(current_slot):
 
 def intent_received(hermes, intent_message):
     sentence = 'You asked me '
-    house_room_slot = intent_message.slots.house_room.first()
-    devnum = device_number(house_room_slot.value)
+    device_name_slot = intent_message.slots.device_name.first()
+    devnum = device_number(device_name_slot.value)
 
     if intent_message.intent.intent_name == 'jaimevegas:turnOn':
-        sentence += 'to turn on ' + house_room_slot.value
+        sentence += 'to turn on ' + device_name_slot.value
         r = requests.get(deviceOn[devnum])
         
     elif intent_message.intent.intent_name == 'jaimevegas:turnOff':
-        sentence += 'to turn off ' + house_room_slot.value
+        sentence += 'to turn off ' + device_name_slot.value
         r = requests.get(deviceOff[devnum])
         
     else:
@@ -35,4 +35,4 @@ def intent_received(hermes, intent_message):
     
     
 with Hermes(MQTT_ADDR) as h:
- h.subscribe_intents(intent_received).start()
+    h.subscribe_intents(intent_received).start()
