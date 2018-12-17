@@ -32,7 +32,7 @@ sudo systemctl start snips-skill-server
 
 `Hey Snips`
 
-`Turn on kitchen light`
+`Turn on kitchen lights`
 
 ## Logs
 Show snips-skill-server logs with sam:
