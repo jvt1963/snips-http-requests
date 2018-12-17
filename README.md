@@ -1,5 +1,5 @@
 # Snips turn-on turn-off by http requests
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/snipsco/snips-skill-owm/master/LICENSE.txt)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/jvt1963/snips-turnOnOff-http/master/LICENSE)
 
 This is a Snips action written in Python and is compatible with `snips-skill-server`.
 
